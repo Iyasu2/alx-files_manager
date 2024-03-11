@@ -1,7 +1,6 @@
 import sha1 from 'sha1';
 import Queue from 'bull';
 import dbClient from '../utils/db';
-import userUtils from '../utils/user';
 
 const userQueue = new Queue('userQueue');
 
