@@ -7,3 +7,8 @@
 433:M 07 Mar 2024 20:06:15.969 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
 433:M 07 Mar 2024 20:06:15.969 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
 433:M 07 Mar 2024 20:06:15.969 * Ready to accept connections
+433:M 07 Mar 2024 21:06:16.056 * 1 changes in 3600 seconds. Saving...
+433:M 07 Mar 2024 21:06:16.077 * Background saving started by pid 1219
+1219:C 07 Mar 2024 21:06:16.089 * DB saved on disk
+1219:C 07 Mar 2024 21:06:16.091 * RDB: 0 MB of memory used by copy-on-write
+433:M 07 Mar 2024 21:06:16.179 * Background saving terminated with success
