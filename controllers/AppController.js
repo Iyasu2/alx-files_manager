@@ -15,7 +15,6 @@ class AppController {
       // Assume you have access to the 'users' and 'files' collections
       const usersCount = await dbClient.nbUsers();
       const filesCount = await dbClient.nbFiles();
-
       const stats = { users: usersCount, files: filesCount };
       res.status(200).json(stats);
     } catch (error) {
