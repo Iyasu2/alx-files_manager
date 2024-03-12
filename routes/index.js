@@ -1,5 +1,5 @@
-// Import necessary modules and controllers
-import express from 'express';
+// eslint-disable-next-line no-unused-vars
+import { Express } from 'express';
 import AppController from '../controllers/AppController';
 import AuthController from '../controllers/AuthController';
 import UsersController from '../controllers/UsersController';
@@ -9,10 +9,9 @@ import { APIError, errorResponse } from '../middlewares/error';
 
 /**
  * Injects routes with their handlers to the given Express application.
- * @param {express.Application} api
+ * @param {Express} api
  */
 const injectRoutes = (api) => {
-  // Define your routes using `api` directly
   api.get('/status', AppController.getStatus);
   api.get('/stats', AppController.getStats);
 
@@ -29,14 +28,10 @@ const injectRoutes = (api) => {
   api.put('/files/:id/unpublish', xTokenAuthenticate, FilesController.putUnpublish);
   api.get('/files/:id/data', FilesController.getFile);
 
-  // Handle 404 errors
   api.all('*', (req, res, next) => {
     errorResponse(new APIError(404, `Cannot ${req.method} ${req.url}`), req, res, next);
   });
-
-  // Use errorResponse middleware
   api.use(errorResponse);
 };
 
 export default injectRoutes;
-
