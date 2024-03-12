@@ -35,4 +35,3 @@ export const xTokenAuthenticate = async (req, res, next) => {
   req.user = user;
   next();
 };
-
